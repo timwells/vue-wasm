@@ -2,6 +2,7 @@
 
 mod utils;
 mod lvs;
+mod pg;
 
 use wasm_bindgen::prelude::*;
 
@@ -21,7 +22,7 @@ extern "C" {
 
 #[wasm_bindgen]
 pub fn greet() {
-    alert("Hello, vue-wasm!");
+    alert("vue-wasm alert!");
 }
 
 #[wasm_bindgen]
@@ -46,6 +47,16 @@ pub fn uuid() -> String {
 
 #[wasm_bindgen]
 pub fn levenshtein(a: &str, b: &str) -> i32 {    
-
     return lvs::levenshtein(&a, &b) as i32
+}
+
+
+#[wasm_bindgen]
+pub fn generatepwd(
+    nchars: i32, 
+    specialchars: bool,
+    uppercase: bool,
+    lowercase: bool,
+    numbers: bool) -> String {
+    return pg::generatepwd(nchars,specialchars,uppercase,lowercase,numbers)
 }

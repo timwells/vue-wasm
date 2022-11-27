@@ -11,9 +11,9 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/about',
-    name: 'about',
-    component: () => import('../views/AboutView.vue')
+    path: '/generate-password',
+    name: 'generate-password',
+    component: () => import('../views/GeneratePasswordView.vue')
   },
   {
     path: '/math',
@@ -24,7 +24,12 @@ const routes = [
     path: '/levenshtein',
     name: 'levenshtein',
     component: () => import('../views/LevenshteinView.vue')
-  }
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: () => import('../views/AboutView.vue')
+  },
 ]
 
 const router = new VueRouter({

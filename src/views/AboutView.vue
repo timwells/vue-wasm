@@ -1,6 +1,7 @@
 <template>
     <div>
-      <h1>This is an About page</h1>
+      <h1>About</h1>
+      <p>Some experimentation with WebAssembly and Vue</p>      
     </div>
 </template>
   

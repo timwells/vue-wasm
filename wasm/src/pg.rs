@@ -35,10 +35,6 @@ pub fn generatepwd(
         chars.push(i as char);
     }
 
-    if _specialchars {
-        chars.append(&mut SPECIAL_CHARS.to_vec());
-    }
-
     if _uppercase {
         for i in 'A' as u8..'Z' as u8 + 1 {
             chars.push(i as char);
@@ -51,6 +47,11 @@ pub fn generatepwd(
         }
     }
 
+    if _specialchars {
+        chars.append(&mut SPECIAL_CHARS.to_vec());
+    }
+
+    let mut rng = thread_rng();    
     let password: String = (0.._nchars).map(|_| {
         let idx = rng.gen_range(0, _vsize);
         chars[idx] as char

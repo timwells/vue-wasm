@@ -22,7 +22,7 @@ const routes = [
   },
   {
     path: '/qrcode',
-    name: 'math',
+    name: 'qrcode',
     component: () => import('../views/QrCodeView.vue')
   },
   {

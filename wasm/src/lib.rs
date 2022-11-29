@@ -67,3 +67,4 @@ pub fn qrcode(arg: &str, width:i32, height:i32) -> String {
     let _height = height as u32;
     return qr::qrcode_ffi(&arg, _width, _height)
 }
+

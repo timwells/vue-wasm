@@ -6,7 +6,6 @@ use rand::Rng;
 
 const SPECIAL_CHARS: [char; 14] = ['!', '#', '$', '%', '&', '*', ']', '[', '(', ')', '{', '}', '+', '-',];
 
-
 pub fn generatepwd(
     _nchars: i32, 
     _specialchars: bool,
@@ -16,13 +15,13 @@ pub fn generatepwd(
     
     let mut _vsize = 0;
 
-    if _specialchars
+    if _specialchars == true
          { _vsize += 14 }
-    if _uppercase
+    if _uppercase == true
         { _vsize += 26 }
-    if _lowercase
+    if _lowercase == true
         { _vsize += 26 }
-    if _numbers
+    if _numbers == true
         { _vsize += 10 }
     
     if _vsize == 0
@@ -31,25 +30,29 @@ pub fn generatepwd(
     let mut chars: Vec<char> = Vec::with_capacity(_vsize);
 
     // Default Lowercase chars
-    for i in 'a' as u8..'z' as u8 + 1 {
-        chars.push(i as char);
+    if _lowercase == true {    
+        for i in 'a' as u8..'z' as u8 + 1 {
+            chars.push(i as char);
+        }
     }
 
-    if _uppercase {
+    if _uppercase == true {
         for i in 'A' as u8..'Z' as u8 + 1 {
             chars.push(i as char);
         }
     }
 
-    if _numbers {
+    if _numbers == true {
         for i in '0' as u8..'9' as u8 + 1 {
             chars.push(i as char);
         }
     }
 
-    if _specialchars {
+    if _specialchars == true {
         chars.append(&mut SPECIAL_CHARS.to_vec());
     }
+    
+
 
     let mut rng = thread_rng();    
     let password: String = (0.._nchars).map(|_| {

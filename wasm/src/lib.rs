@@ -3,6 +3,7 @@
 mod utils;
 mod lvs;
 mod pg;
+mod qr;
 
 use wasm_bindgen::prelude::*;
 
@@ -50,7 +51,6 @@ pub fn levenshtein(a: &str, b: &str) -> i32 {
     return lvs::levenshtein(&a, &b) as i32
 }
 
-
 #[wasm_bindgen]
 pub fn generatepwd(
     nchars: i32, 
@@ -59,4 +59,11 @@ pub fn generatepwd(
     lowercase: bool,
     numbers: bool) -> String {
     return pg::generatepwd(nchars,specialchars,uppercase,lowercase,numbers)
+}
+
+#[wasm_bindgen]
+pub fn qrcode(arg: &str, width:i32, height:i32) -> String {
+    let _width = width as u32;
+    let _height = height as u32;
+    return qr::qrcode_ffi(&arg, _width, _height)
 }

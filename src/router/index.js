@@ -21,9 +21,19 @@ const routes = [
     component: () => import('../views/MathView.vue')
   },
   {
+    path: '/qrcode',
+    name: 'math',
+    component: () => import('../views/QrCodeView.vue')
+  },
+  {
     path: '/levenshtein',
     name: 'levenshtein',
     component: () => import('../views/LevenshteinView.vue')
+  },
+  {
+    path: '/wasm-viewer',
+    name: 'wasm-viewer',
+    component: () => import('../views/WasmView.vue')
   },
   {
     path: '/about',

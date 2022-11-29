@@ -3,8 +3,11 @@
     <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/generate-password">Generate Password</router-link> |
-      <router-link to="/math">Math</router-link> |
       <router-link to="/levenshtein">Levenshtein</router-link> |
+      <router-link to="/qrcode">QRcode</router-link> |
+      <router-link to="/math">Math</router-link> |
+      <router-link to="/wasm-viewer">Wasm-Viewer</router-link> |
+
       <router-link to="/about">About</router-link>
     </nav>
     <router-view/>

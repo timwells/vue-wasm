@@ -1,0 +1,3 @@
+https://shift.infinite.red/adding-tensorflow-js-wasm-backend-in-create-react-app-f57f5baab736
+https://github.com/yashints/tjfs-wasm-demo/blob/master/index.js
+

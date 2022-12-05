@@ -4,11 +4,14 @@
   "private": false,
   "author": "",
   "scripts": {
+    "winwasm": "PowerShell -Command cp node_modules/@tensorflow/tfjs-backend-wasm/dist/tfjs-backend-wasm.wasm ./public -Force",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@tensorflow/tfjs": "^4.1.0",
+    "@tensorflow/tfjs-backend-wasm": "^4.1.0",
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
     "vue-router": "^3.6.5",

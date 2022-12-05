@@ -36,6 +36,21 @@ const routes = [
     component: () => import('../views/WasmView.vue')
   },
   {
+    path: '/wave-equation',
+    name: 'wave-equation',
+    component: () => import('../views/WaveEquationView.vue')
+  },
+  {
+    path: '/performance-test',
+    name: 'peformance-test',
+    component: () => import('../views/PerformanceTestView.vue')
+  },
+  {
+    path: '/detection',
+    name: 'detection',
+    component: () => import('../views/ImageDetectionView.vue')
+  },
+  {
     path: '/about',
     name: 'about',
     component: () => import('../views/AboutView.vue')

@@ -1,5 +1,5 @@
 <template>
     <div>
-      <h1>This is an Math page</h1>
+      <h1>This is a Maths page</h1>
     </div>
 </template>
